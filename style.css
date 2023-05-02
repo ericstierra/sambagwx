@@ -9,8 +9,6 @@ body {
 .chatbot {
     margin: 20px auto;
     max-width: 600px;
-    min-width: 320px;
-    height: 100%;
     background-color: #f6f6f6;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -19,17 +17,11 @@ body {
     flex-direction: column;
 }
 
-.chatbot-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2f9ae0;
-    color: #fff;
-    border-radius: 10px 10px 0 0;
-}
 
 .chatbot-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -37,7 +29,28 @@ body {
     background-color: #3498db;
     padding: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-}
+  }
+  
+  .chatbot-title img {
+    height: 100;
+    max-width: 100%;
+  }
+  
+  .chatbot-title h1 {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .chatbot-title {
+      flex-direction: column;
+    }
+    
+    .chatbot-title h1 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }  
 
 .chatbot-close {
     border: none;
